@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uzel & pírko – salonek pro svázání a lechtání</title>
+<meta name="description" content="Diskrétní salonek v soukromí. Jemné svázání a lechtání, vše předem domluvené a s vaším souhlasem.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#3A1F3D; --plum-2:#52304F; --silk:#F1D9DE; --hemp:#C9A46A;
+    --paper:#FBF5F2; --text:#2A1A2C; --muted:#6E5A6B;
+    --font:"Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);background:var(--paper);color:var(--text);line-height:1.55;font-size:1.0625rem}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--hemp);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+
+  header{background:var(--plum);color:var(--silk);overflow:hidden;position:relative}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0}
+  .logo{font-weight:800;font-size:1.2rem;letter-spacing:-.01em;text-decoration:none}
+  nav a.book{background:var(--hemp);color:var(--plum);padding:.55rem 1rem;border-radius:999px;font-weight:600;text-decoration:none}
+  .hero{padding:3.5rem 0 5rem;position:relative}
+  .hero h1{font-size:clamp(2.6rem,9vw,6.2rem);line-height:.95;font-weight:800;letter-spacing:-.03em;max-width:12ch;position:relative;z-index:2}
+  .hero p{max-width:34rem;margin-top:1.5rem;font-size:1.15rem;color:#E6CBD2;position:relative;z-index:2}
+  .rope{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+  .rope path{fill:none;stroke:var(--hemp);stroke-width:14;stroke-linecap:round;stroke-dasharray:2600;stroke-dashoffset:2600;animation:tie 2.4s .3s cubic-bezier(.6,.1,.3,1) forwards;opacity:.9}
+  .rope path.shade{stroke:#9C7A45;stroke-width:14;stroke-dasharray:6 18;animation:none;stroke-dashoffset:0;opacity:.55}
+  @keyframes tie{to{stroke-dashoffset:0}}
+  .cta{display:inline-block;margin-top:2rem;background:var(--silk);color:var(--plum);padding:.9rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;position:relative;z-index:2}
+
+  section{padding:4.5rem 0}
+  h2{font-size:clamp(1.8rem,4.5vw,2.8rem);letter-spacing:-.02em;line-height:1.05;margin-bottom:1.5rem;max-width:20ch}
+  .lead{max-width:40rem;color:var(--muted)}
+
+  .menu{display:grid;gap:0;margin-top:2rem;border-top:2px solid var(--plum)}
+  .item{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:1.4rem 0;border-bottom:1px solid #DCC6CB}
+  .item h3{font-size:1.35rem}
+  .item .price{font-weight:800;font-size:1.35rem;white-space:nowrap}
+  .item p{grid-column:1/-1;color:var(--muted);max-width:40rem}
+  .item .len{font-weight:400;color:var(--muted);font-size:1rem}
+
+  .steps{list-style:none;padding:0;display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));margin-top:2rem;counter-reset:s}
+  .steps li{counter-increment:s;padding-left:3.2rem;position:relative}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:-.1rem;width:2.3rem;height:2.3rem;border-radius:50%;border:2px solid var(--plum);display:grid;place-items:center;font-weight:800}
+  .steps strong{display:block;font-size:1.15rem;margin-bottom:.25rem}
+
+  .rules{background:var(--silk)}
+  .rules ul{padding-left:1.2rem;display:grid;gap:.6rem;max-width:42rem}
+
+  .contact{background:var(--plum);color:var(--silk)}
+  .contact .lead{color:#E6CBD2}
+  .contact-grid{display:grid;gap:1rem;margin-top:2rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+  .contact a.big{display:block;font-size:1.4rem;font-weight:600;text-decoration:none;border-bottom:2px solid var(--hemp);padding-bottom:.4rem;width:max-content;max-width:100%}
+  .contact small{display:block;color:#CDAFB8;margin-bottom:.3rem}
+  footer{background:var(--plum-2);color:#CDAFB8;padding:1.5rem 0;font-size:.9rem}
+
+  @media (prefers-reduced-motion:reduce){.rope path{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <svg class="rope" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M1250 90 C 980 60, 860 260, 1010 330 S 1160 180, 980 150 S 720 420, 900 520 S 1120 470, 1060 380 S 700 300, 640 640"/>
+    <path class="shade" d="M1250 90 C 980 60, 860 260, 1010 330 S 1160 180, 980 150 S 720 420, 900 520 S 1120 470, 1060 380 S 700 300, 640 640"/>
+  </svg>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#">Uzel & pírko</a>
+      <a class="book" href="#kontakt">Objednat se</a>
+    </nav>
+    <div class="hero">
+      <h1>Svázaní, bezmocní a k popukání.</h1>
+      <p>Diskrétní salonek v soukromí, kde místo masáže dostanete jemné svázání a poctivé lechtání. Vše domluvíme předem a tempo určujete vy.</p>
+      <a class="cta" href="#kontakt">Domluvit termín</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="nabidka">
+    <div class="wrap">
+      <h2>Co u nás můžete zažít</h2>
+      <p class="lead">Ceny jsou orientační. Délku i intenzitu si upravíme podle toho, co vám sedí.</p>
+      <div class="menu">
+        <div class="item">
+          <h3>Seznámení <span class="len">· 30 min</span></h3><span class="price">900 Kč</span>
+          <p>Pro první návštěvu. Lehké svázání zápěstí a lechtání chodidel, abyste zjistili, jak to na vás funguje.</p>
+        </div>
+        <div class="item">
+          <h3>Klasika <span class="len">· 60 min</span></h3><span class="price">1 600 Kč</span>
+          <p>Svázání na lůžku, lechtání pírky, prsty i štětečky. Chodidla, žebra, podpaží – podle vaší domluvy.</p>
+        </div>
+        <div class="item">
+          <h3>Dlouhé odpoledne <span class="len">· 90 min</span></h3><span class="price">2 300 Kč</span>
+          <p>Víc času, víc pauz na vydechnutí a víc pomůcek. Vhodné pro ty, kdo už vědí, co mají rádi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prubeh">
+    <div class="wrap">
+      <h2>Jak návštěva probíhá</h2>
+      <ol class="steps">
+        <li><strong>Domluva</strong>Napíšete nebo zavoláte. Domluvíme termín a co vás láká.</li>
+        <li><strong>Hranice</strong>Před začátkem si projdeme, co ano a co ne, a zvolíte si stopslovo.</li>
+        <li><strong>Sezení</strong>Svázání pohodlnými pouty nebo lanem a lechtání vaším tempem.</li>
+        <li><strong>Vydechnutí</strong>Po sezení je čas na vodu, čaj a klidné dojití k sobě.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="rules" id="pravidla">
+    <div class="wrap">
+      <h2>Pár pravidel</h2>
+      <ul>
+        <li>Služby jsou pouze pro osoby starší 18 let.</li>
+        <li>Stopslovo platí vždy a okamžitě. Sezení můžete kdykoli ukončit.</li>
+        <li>Pouta i lana jsou měkká a čistá, svázání kontrolujeme po celou dobu.</li>
+        <li>Diskrétnost je samozřejmost. Adresu posíláme až po potvrzení termínu.</li>
+        <li>Nepřijímáme klienty pod vlivem alkoholu nebo jiných látek.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="kontakt">
+    <div class="wrap">
+      <h2>Domluvte si termín</h2>
+      <p class="lead">Nejrychleji odpovídáme na SMS a WhatsApp, obvykle do několika hodin.</p>
+      <div class="contact-grid">
+        <div><small>Telefon a WhatsApp</small><a class="big" href="tel:+420000000000">+420 000 000 000</a></div>
+        <div><small>E-mail</small><a class="big" href="mailto:info@example.cz">info@example.cz</a></div>
+        <div><small>Kde</small><span class="big" style="border:0">Praha – přesná adresa po domluvě</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Uzel & pírko · Pouze pro osoby 18+</div></footer>
+</body>
+</html>
