@@ -5,10 +5,84 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Uzel & pírko – salonek pro svázání a lechtání</title>
 <meta name="description" content="Diskrétní salonek v soukromí. Jemné svázání a lechtání, vše předem domluvené a s vaším souhlasem.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://uzelapirko.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="Uzel & pírko">
+<meta property="og:url" content="https://uzelapirko.vercel.app/">
+<meta property="og:title" content="Uzel & pírko – salonek pro svázání a lechtání">
+<meta property="og:description" content="Diskrétní salonek v soukromí. Jemné svázání a lechtání, vše předem domluvené a s vaším souhlasem.">
+<meta property="og:image" content="https://uzelapirko.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Uzel & pírko – salonek pro svázání a lechtání">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#3A1F3D">
+<link rel="preload" href="fonts/bricolage-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  /* Písmo leží přímo na webu, ne u Googlu: stránka se načte rychleji a návštěvníkova IP adresa nejde třetí straně (GDPR). */
+  /* latin-ext */
+  @font-face {
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(fonts/bricolage-normal-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(fonts/bricolage-normal-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(fonts/bricolage-normal-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(fonts/bricolage-normal-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 800;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(fonts/bricolage-normal-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 800;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(fonts/bricolage-normal-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
   :root{
     --plum:#3A1F3D; --plum-2:#52304F; --silk:#F1D9DE; --hemp:#C9A46A;
     --paper:#FBF5F2; --text:#2A1A2C; --muted:#6E5A6B;
@@ -52,6 +126,14 @@
 
   .rules{background:var(--silk)}
   .rules ul{padding-left:1.2rem;display:grid;gap:.6rem;max-width:42rem}
+
+  .faq{margin-top:2rem;border-top:2px solid var(--plum);max-width:46rem}
+  .faq details{border-bottom:1px solid #DCC6CB}
+  .faq summary{cursor:pointer;list-style:none;padding:1.1rem 2.5rem 1.1rem 0;font-weight:600;font-size:1.15rem;position:relative}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";position:absolute;right:.25rem;top:.85rem;font-size:1.6rem;font-weight:400;line-height:1}
+  .faq details[open] summary::after{content:"–"}
+  .faq details p{padding:0 0 1.2rem;color:var(--muted);max-width:40rem}
 
   .contact{background:var(--plum);color:var(--silk)}
   .contact .lead{color:#E6CBD2}
@@ -129,13 +211,27 @@
     </div>
   </section>
 
+  <section id="otazky">
+    <div class="wrap">
+      <h2>Časté otázky</h2>
+      <div class="faq">
+        <details><summary>Jsem tu poprvé. Co si vybrat?</summary><p>Seznámení na 30 minut je určené právě pro první návštěvu: lehké svázání zápěstí a lechtání chodidel, abyste zjistili, jak to na vás funguje.</p></details>
+        <details><summary>Co když toho bude moc?</summary><p>Stopslovo platí vždy a okamžitě. Sezení můžete kdykoli ukončit a tempo určujete vy.</p></details>
+        <details><summary>Je svázání bezpečné?</summary><p>Pouta i lana jsou měkká a čistá a svázání kontrolujeme po celou dobu sezení.</p></details>
+        <details><summary>Kde salonek je?</summary><p>V Praze. Přesnou adresu posíláme až po potvrzení termínu.</p></details>
+        <details><summary>Jak se objednám?</summary><p>Napište SMS nebo na WhatsApp, případně zavolejte. Odpovídáme obvykle do několika hodin.</p></details>
+        <details><summary>Pro koho je salonek?</summary><p>Pouze pro osoby starší 18 let. Nepřijímáme klienty pod vlivem alkoholu nebo jiných látek.</p></details>
+      </div>
+    </div>
+  </section>
+
   <section class="contact" id="kontakt">
     <div class="wrap">
       <h2>Domluvte si termín</h2>
       <p class="lead">Nejrychleji odpovídáme na SMS a WhatsApp, obvykle do několika hodin.</p>
       <div class="contact-grid">
-        <div><small>Telefon a WhatsApp</small><a class="big" href="tel:+420728752965">+420 728 752 965</a></div>
-        <div><small>E-mail</small><a class="big" href="mailto:info@example.cz">info@example.cz</a></div>
+        <div><small>Telefon</small><a class="big" href="tel:+420728752965">+420 728 752 965</a></div>
+        <div><small>WhatsApp</small><a class="big" href="https://wa.me/420728752965?text=Dobr%C3%BD%20den%2C%20r%C3%A1d%28a%29%20bych%20si%20domluvil%28a%29%20term%C3%ADn." rel="noopener">Napsat na WhatsApp</a></div>
         <div><small>Kde</small><span class="big" style="border:0">Praha – přesná adresa po domluvě</span></div>
       </div>
     </div>
@@ -143,5 +239,6 @@
 </main>
 
 <footer><div class="wrap">© 2026 Uzel & pírko · Pouze pro osoby 18+</div></footer>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
